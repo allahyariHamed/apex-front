@@ -1,0 +1,32 @@
+.stroke-animation {
+    stroke-dasharray: 100%;
+}
+
+.stroke-animation:hover {
+    animation: show-on-lines 1.3s -0.7s linear forwards;
+}
+
+@keyframes show-on-lines {
+    0% {
+        stroke-dashoffset: 0%;
+    }
+
+    100% {
+        stroke-dashoffset: 100%;
+    }
+}
+
+.stroke-offset {
+    stroke-dasharray: 100%;
+    stroke-dashoffset: 100%;
+}
+
+#header-title::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    border: 1px solid gold;
+    width: 40%;
+    left: 30%;
+    right: 30%;
+}

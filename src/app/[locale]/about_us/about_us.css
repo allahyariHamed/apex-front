@@ -1,0 +1,118 @@
+.about-us-body {
+    display: flex;
+    text-align: center;
+    max-width: 90vw;
+    height: 95vh;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+}
+
+.about-us-h1 {
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.about-us-h1::before {
+    content: '';
+    border-bottom: 1px solid gold;
+    width: 20%;
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    right: 40%;
+}
+
+.about-us-h2 {
+    margin-top: 20px;
+}
+
+.about-us-h3 {
+    margin-top: 20px;
+    position: relative;
+    padding-bottom: 10px;
+    max-width: 70vw;
+    line-height: 28px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-us-imgContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 40%;
+    width: 100%;
+}
+
+.about-us-img {
+    position: relative !important;
+    height: 225px;
+    width: 225px;
+    border-radius: 50%;
+}
+
+.Image {
+    border-radius: inherit;
+}
+
+.khosro-img {
+    opacity: 0;
+    animation: image_animation 2s linear 1s 1 forwards;
+}
+
+.mojtaba-img {
+    opacity: 0;
+    animation: image_animation 2s linear 2s 1 forwards;
+}
+
+.mehdi-img {
+    opacity: 0;
+    animation: image_animation 2s linear 3s 1 forwards;
+}
+
+.khaled-img {
+    opacity: 0;
+    animation: image_animation 2s linear 4s 1 forwards;
+}
+
+@keyframes image_animation {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 18px !important;
+    color: #222 !important;
+    font-weight: bolder;
+}
+
+.svg {
+    stroke-dasharray: 100%;
+    stroke-dashoffset: 0%;
+    animation: show-on-lines 4s linear forwards;
+}
+
+Image {
+    stroke-dasharray: 100%;
+    stroke-dashoffset: 0%;
+    animation: show-on-lines 4s linear forwards;
+}
+
+@keyframes show-on-lines {
+    0% {
+        stroke-dashoffset: 100%;
+    }
+
+    100% {
+        stroke-dashoffset: 0%;
+    }
+}

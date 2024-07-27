@@ -1,0 +1,30 @@
+/* .stop_1 {
+    stop-color: rgb(0, 0, 0);
+}
+
+.stop_2 {
+    stop-color: rgb(255, 233, 0);
+}
+
+.stop_3 {
+    stop-color: rgb(216, 176, 3);
+} */
+
+.path {
+    stroke-width: 3px;
+    stroke: url('#gradient-0');
+    fill: rgb(17, 17, 17);
+    stroke-dasharray: 255%;
+    stroke-dashoffset: 0%;
+    animation: show-logo 4.5s linear forwards;
+}
+
+@keyframes show-logo {
+    0% {
+        stroke-dashoffset: 255%;
+    }
+
+    100% {
+        stroke-dashoffset: 0%;
+    }
+}

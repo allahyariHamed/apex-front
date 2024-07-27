@@ -1,0 +1,8 @@
+// export { default as ElectronicBoardRightSVG } from "/public/ElectronicBoardRight.svg"
+// export { default as ElectronicBoardLeftSVG } from "/public/ElectronicBoardLeft.svg"
+// export { default as SkillsLineSVG } from "/public/skills-line-2.svg"
+export { default as Circle } from "/public/circle.svg"
+// export { default as Projects_board } from "/public/projects_board.svg"
+// export { default as FaLogo } from "/public/fa-logo.svg"
+// export { default as EnLogo } from "/public/en-logo.svg"
+// export { default as Circuit_board } from "../../../public/circuit_board_4.svg"

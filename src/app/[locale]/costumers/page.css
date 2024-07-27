@@ -1,0 +1,45 @@
+.stroke-animation {
+    stroke-dasharray: 100%;
+    animation: showLines 4s 1s linear forwards;
+}
+
+.ellipse-animation {
+    stroke-dasharray: 100%;
+    animation: showLines 2s linear forwards;
+}
+
+@keyframes showLines {
+    0% {
+        stroke-dashoffset: 0%;
+    }
+
+    100% {
+        stroke-dashoffset: 100%;
+    }
+}
+
+    /* .animate-up-down {
+        animation: up-down 2s ease-in-out infinite;
+    }
+
+    @keyframes up-down {
+        0% {
+            margin-bottom: 0px;
+        }
+
+        25%{
+            margin-bottom: 5px;
+        }
+
+        50% {
+            margin-bottom: 0px;
+        }
+
+        75%{
+            margin-bottom: -5px;
+        }
+
+        100% {
+            margin-bottom: 0px;
+        }
+    } */
