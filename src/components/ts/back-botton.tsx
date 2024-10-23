@@ -6,7 +6,7 @@ import { IoArrowBackCircle } from 'react-icons/io5';
 import clsx from 'clsx';
 
 interface Props {
-    className?: string ;
+    className?: string;
 }
 
 const Back_botton: FC<Props> = ({ className }) => {
@@ -29,9 +29,16 @@ const Back_botton: FC<Props> = ({ className }) => {
     }, [])
 
     return (
+
         <div>
+            <svg width="0" height="0">
+                <linearGradient id="gradient" x1="100%" y1="100%" x2="0%" y2="0%">
+                    <stop stopColor="#ca8a04" offset="0%" />
+                    <stop stopColor="#fde047" offset="100%" />
+                </linearGradient>
+            </svg>
             <a onClick={handleClick}>
-                <IoArrowBackCircle className={clsx('absolute w-11 h-11 top-1 left-7 shadow shadow-black rounded-3xl active:shadow-none hover:cursor-pointer text-yellow-400', className)} />
+                <IoArrowBackCircle className={clsx('absolute w-11 h-11 top-1 left-7 rounded-3xl hover:cursor-pointer', className)} style={{ fill: "url(#gradient)" }}/>
             </a>
         </div>
     )

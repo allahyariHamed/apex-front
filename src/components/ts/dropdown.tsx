@@ -18,10 +18,10 @@ export const Dropdown: FC = () => {
     return (
         <div className="relative text-left p-5" >
 
-            <button onClick={() => setDropdown(!dropdown)} onBlur={() => {delay()}} id="dropdown-button" className="flex gap-2 px-4 py-2 text-sm bg-222 border border-transparent hover:border-yellow-400 rounded-full focus:ring-1 focus:ring-yellow-400 transition-all">
+            <button onClick={() => setDropdown(!dropdown)} onBlur={() => {delay()}} id="dropdown-button" className="flex gap-2 px-4 py-2 text-sm bg-222 border border-transparent hover:border-yellow-400 rounded-lg focus:ring-1 focus:ring-yellow-400 transition-all">
                 <GrLanguage className='text-yellow-400' />
                 {
-                    dropdown ? <FaChevronDown className='text-yellow-400' /> : <FaChevronUp className='text-yellow-400 rotate-90' />
+                    dropdown ? <FaChevronDown className='text-yellow-400 rotate-180' /> : <FaChevronUp className='text-yellow-400 rotate-180' />
                 }
             </button>
 

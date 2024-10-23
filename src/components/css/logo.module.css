@@ -16,7 +16,7 @@
     fill: rgb(17, 17, 17);
     stroke-dasharray: 255%;
     stroke-dashoffset: 0%;
-    animation: show-logo 4.5s linear forwards;
+    animation: show-logo 5s linear forwards;
 }
 
 @keyframes show-logo {

@@ -5,7 +5,7 @@
 
 .ellipse-animation {
     stroke-dasharray: 100%;
-    animation: showLines 2s linear forwards;
+    animation: showLines 2s linear 1.5s forwards;
 }
 
 @keyframes showLines {
@@ -17,6 +17,11 @@
         stroke-dashoffset: 100%;
     }
 }
+
+/* .shadow-right{
+    box-shadow: '10px 0 10px -5px rgba(255, 255, 255, 0.5)';
+} */
+
 
     /* .animate-up-down {
         animation: up-down 2s ease-in-out infinite;
