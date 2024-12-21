@@ -4,5 +4,10 @@
     "location": "ایران-البرز-کرج-بلوار هفت تیر",
     "telegram": "apexteam@chmail.ir",
     "clock": "هر روز از ساعت 10 الی 22",
-    "call": "+98 26 3256 74 09"
+    "call": "+98 26 3256 74 09",
+    "fullName": "نام و نام خانوادگی",
+    "phoneNumber": "تلفن همراه",
+    "email": "ایمیل",
+    "publicMassage": "پیام عمومی",
+    "submit": "ارسال"
 }

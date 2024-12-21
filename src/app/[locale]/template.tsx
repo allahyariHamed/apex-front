@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect } from "react";
 // import { animatePageIn } from "../../../animations";
 import { Circle } from '@/components/ts/svgExport';
 import { motion } from "framer-motion";

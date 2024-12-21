@@ -4,5 +4,10 @@
     "location": "Iran-Alborz-Karaj-Hafte tir bolvard",
     "telegram": "apexteam@chmail.ir",
     "clock": "every day from 10.AM utill 22.PM",
-    "call": "+98 26 3256 74 09"
+    "call": "+98 26 3256 74 09",
+    "fullName": "full name",
+    "phoneNumber": "phone number",
+    "email": "email",
+    "publicMassage": "public massage",
+    "submit": "submit"
 }
