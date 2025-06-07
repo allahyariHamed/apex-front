@@ -29,10 +29,7 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
-  background-color: #111;
   font-family: "vazir", sans-serif;
 }
 
@@ -50,3 +47,21 @@ body {
   background-color: #111;
 }
 
+.logo-path {
+    stroke-width: 3px;
+    stroke: url('#gradient-0');
+    fill: rgb(17, 17, 17);
+    stroke-dasharray: 255%;
+    stroke-dashoffset: 0%;
+    animation: show-logo 5s linear forwards;
+}
+
+@keyframes show-logo {
+    0% {
+        stroke-dashoffset: 255%;
+    }
+
+    100% {
+        stroke-dashoffset: 0%;
+    }
+}

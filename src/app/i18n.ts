@@ -4,20 +4,18 @@ import resourcesToBackend from 'i18next-resources-to-backend';
 import i18nConfig from '../../i18nconfig';
 
 export default async function initTranslations(
-    locale: any,
-    namespaces: any,
-    i18nInstance: any,
-    resources: any
-) {
-    i18nInstance = i18nInstance || createInstance();
+    locale: string,
+    namespaces: Record<string, any>,
+    i18nInstance: Record<string, any> | undefined,
+    resources: Record<string, any> | undefined) {
 
+    i18nInstance = i18nInstance || createInstance();
     i18nInstance.use(initReactI18next);
 
     if (!resources) {
         i18nInstance.use(
             resourcesToBackend(
-                (language: any, namespace: any) =>
-                    import(`/locales/${language}/${namespace}.json`)
+                (language: string, namespace: Record<string, any>) => import(`/locales/${language}/${namespace}.json`)
             )
         );
     }

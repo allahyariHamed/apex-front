@@ -4,41 +4,30 @@ import { US } from 'country-flag-icons/react/3x2'
 import { IR } from 'country-flag-icons/react/3x2'
 import Link from 'next/link';
 import { GrLanguage } from "react-icons/gr";
-import { FaChevronDown } from "react-icons/fa";
-import { FaChevronUp } from "react-icons/fa";
 
 export const Dropdown: FC = () => {
     const [dropdown, setDropdown] = useState<boolean>(false)
     const delay = () => {
-        setTimeout(() => {
-            setDropdown(false)
-        }, 150);
+        setTimeout(() => { setDropdown(false) }, 150);
     }
 
     return (
-        <div className="relative text-left p-5" >
+        <div className="fixed top-0 text-left flex p-5" >
 
-            <button onClick={() => setDropdown(!dropdown)} onBlur={() => {delay()}} id="dropdown-button" className="flex gap-2 px-4 py-2 text-sm bg-222 border border-transparent hover:border-yellow-400 rounded-lg focus:ring-1 focus:ring-yellow-400 transition-all">
+            <button onClick={() => setDropdown(!dropdown)} onBlur={delay} id="dropdown-button" className="bg-transparent rounded-full p-3 border border-transparent hover:border-yellow-400 focus:ring-1 focus:ring-yellow-400 transition">
                 <GrLanguage className='text-yellow-400' />
-                {
-                    dropdown ? <FaChevronDown className='text-yellow-400 rotate-180' /> : <FaChevronUp className='text-yellow-400 rotate-180' />
-                }
             </button>
 
-            {
-                dropdown ?
-                    <div className="absolute left-5 top-16 w-28 rounded-md shadow-lg shadow-black z-10">
-                        <div className="grid grid-cols-2">
-                            <Link href='/en' className="flex rounded-md p-2 text-sm text-yellow-500 hover:bg-gray-700 active:bg-gray-700 cursor-pointer" role="menuitem">
-                                <US title="United States" />
-                            </Link>
-                            <Link href='/fa' className="flex rounded-md p-2 text-sm text-yellow-500 hover:bg-gray-700 active:bg-gray-700 cursor-pointer" role="menuitem">
-                                <IR title="Iran" />
-                            </Link>
-                        </div>
-                    </div>
-                    : null
-            }
+            {dropdown && <div className="w-24 rounded-md shadow-lg shadow-black z-10">
+                <div className="grid grid-cols-2">
+                    <Link href='/en' className="rounded-md p-2 text-sm text-yellow-500 hover:bg-gray-700 active:bg-gray-700 cursor-pointer" role="menuitem">
+                        <US title="United States" />
+                    </Link>
+                    <Link href='/fa' className="rounded-md p-2 text-sm text-yellow-500 hover:bg-gray-700 active:bg-gray-700 cursor-pointer" role="menuitem">
+                        <IR title="Iran" />
+                    </Link>
+                </div>
+            </div>}
 
         </div>
     )
