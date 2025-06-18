@@ -7,7 +7,7 @@ import TalkAboutJobForm from './talkAboutJobForm'
 import clsx from 'clsx'
 import { AnimatePresence } from 'framer-motion'
 
-const Content: FC = () => {
+const Content = () => {
     const [buttonState, setButtonState] = useState<number>(0)
 
     return (
@@ -26,7 +26,7 @@ const Content: FC = () => {
                 )}
                     text='button-2' setButtonState={setButtonState} value={2} />
             </div>
-            
+
             <AnimatePresence>
                 {buttonState == 1 && <ContactWays />}
                 {buttonState == 2 && <TalkAboutJobForm />}

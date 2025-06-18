@@ -1,10 +1,4 @@
-import React, { FC } from 'react'
-
-interface Props {
-    className?: string
-}
-
-const CornerLines: FC<Props> = ({ className }) => {
+const CornerLines = ({ className }: { className: string }) => {
     const grandiant0 = { stopColor: "#FFD700" }
     const grandiant1 = { stopColor: "rgb(59.89% 43.888% 0%)" }
     const path = { fill: "rgb(216, 216, 216)", stroke: "#111", fillOpacity: "0", strokeWidth: "10px" }
@@ -114,5 +108,4 @@ const CornerLines: FC<Props> = ({ className }) => {
         </div>
     )
 }
-
 export default CornerLines

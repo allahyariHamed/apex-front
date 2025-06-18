@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { BsInstagram } from 'react-icons/bs';
 import { motion } from 'framer-motion';
 
-const ContactWays: FC = () => {
+const ContactWays = () => {
     const { t } = useTranslation()
 
     return (

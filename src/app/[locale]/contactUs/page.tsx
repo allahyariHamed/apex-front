@@ -5,7 +5,7 @@ import TranslationsProvider from '@/components/ts/translation-provider'
 import Content from './components/content'
 import Back_botton from '@/components/ts/back-botton'
 
-const Contact_us: FC = async ({ params: { locale } }: any) => {
+const ContactUs = async ({ params: { locale } }: any) => {
   const namespaces = ['contactUs']
   const { resources } = await initTranslations(locale, namespaces, undefined, undefined);
 
@@ -20,5 +20,4 @@ const Contact_us: FC = async ({ params: { locale } }: any) => {
     </TranslationsProvider>
   )
 }
-
-export default Contact_us
+export default ContactUs

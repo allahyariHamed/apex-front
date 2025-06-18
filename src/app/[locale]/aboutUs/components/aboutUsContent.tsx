@@ -5,13 +5,13 @@ import Image from 'next/image'
 import Slider from './Slider'
 import Back_botton from '@/components/ts/back-botton'
 
-export const About_us_content = () => {
+const AboutUsContent = () => {
 
     return (
         <div className="about-us-body">
             <div className='relative h-full w-full flex flex-col text-center justify-center shadow-lg shadow-black mt-5 p-7 rounded'>
                 <div className="about-us-h1">
-                    <Back_botton className=''/>
+                    <Back_botton className='' />
                     <h1 className='text-4xl text-yellow-400'>داستان اپکس</h1>
                 </div>
                 <div className="about-us-h2">
@@ -67,3 +67,4 @@ export const About_us_content = () => {
         </div>
     )
 }
+export default AboutUsContent

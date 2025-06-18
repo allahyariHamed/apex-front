@@ -10,7 +10,7 @@ interface Props {
     value: number
 }
 
-const Button: FC<Props> = ({ text, className, setButtonState, value }) => {
+const Button = ({ text, className, setButtonState, value }: Props) => {
     const { t } = useTranslation()
     return (
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 4.5, duration: 1 }}>

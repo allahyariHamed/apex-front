@@ -1,9 +1,9 @@
 import clsx from 'clsx'
-import React, { FC, useState } from 'react'
+import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion';
 
-const TalkAboutJobForm: FC = () => {
+const TalkAboutJobForm = () => {
     const [active, setActive] = useState<boolean>(false)
     const { t } = useTranslation()
 

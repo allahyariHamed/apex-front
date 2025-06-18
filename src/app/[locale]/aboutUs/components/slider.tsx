@@ -1,14 +1,14 @@
 "use client"
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import '@/components/css/slider.css'; 
+import '@/components/css/slider.css';
 
-export default function Slider() {
+const Slider = () => {
     return (
         <div className='relative h-12 bg-yellow-500 rounded shadow-lg shadow-black w-11/12'>
             <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
@@ -32,3 +32,4 @@ export default function Slider() {
         </div>
     );
 }
+export default Slider

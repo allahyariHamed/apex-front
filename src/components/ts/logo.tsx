@@ -1,28 +1,19 @@
 "use client"
 import React from 'react'
 import { useTranslation } from 'react-i18next';
-import { LogoSvg } from './fa-logo';
+import { LogoSvg } from './logo-svg';
+import { motion } from "framer-motion";
 
 export const Logo = () => {
     const { t } = useTranslation()
 
     return (
-        <div className='relative flex items-center'>
-            <svg width="0" height="0">
-                <linearGradient id="gradient" x1="100%" y1="100%" x2="0%" y2="0%">
-                    <stop stopColor="#ca8a04" offset="0%" />
-                    <stop stopColor="#fde047" offset="100%" />
-                </linearGradient>
-            </svg>
+        <div className='flex flex-col justify-center'>
+            <LogoSvg />
 
-            <LogoSvg className='logo-path' />
-
-            <div className='absolute bottom-0'>
-                <div className="text-center">
-                    <h2 className='text-sm bg-gradient-to-r from-yellow-700 to-yellow-200 text-transparent bg-clip-text'>{t("apex_team")}</h2>
-                    <div className="text-[9px] bg-gradient-to-r from-yellow-500 to-yellow-300 text-transparent bg-clip-text py-3">{t("title_under_logo")}</div>
-                </div>
-            </div>
+            <motion.div className="flex justify-center p-2" initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, delay: 6, ease: 'easeInOut' }}>
+                <div className='text-xl lg:text-3xl inline-block bg-gradient-to-r from-yellow-500 via-yellow-200 to-yellow-500 text-transparent bg-clip-text'>{t("apex-team")}</div>
+            </motion.div>
         </div>
     )
 }

@@ -1,34 +1,44 @@
 "use client"
-import React, { FC, useState } from 'react'
+import React, { useState } from 'react'
 import { US } from 'country-flag-icons/react/3x2'
 import { IR } from 'country-flag-icons/react/3x2'
 import Link from 'next/link';
 import { GrLanguage } from "react-icons/gr";
+import clsx from 'clsx';
+import { AnimatePresence, motion } from "framer-motion"
 
-export const Dropdown: FC = () => {
+const Dropdown = () => {
     const [dropdown, setDropdown] = useState<boolean>(false)
     const delay = () => {
         setTimeout(() => { setDropdown(false) }, 150);
     }
 
     return (
-        <div className="fixed top-0 text-left flex p-5" >
+        <div className="flex justify-center absolute top-4 w-full">
+            <motion.button whileHover={{ scale: 1.5 }} onClick={() => setDropdown(!dropdown)} onBlur={delay} id="dropdown-button" className={clsx("relative bg-transparent rounded-full mt-3 p-1",
+                // dropdown && 'focus:ring-1 focus:ring-yellow-400'
+            )}>
+                <GrLanguage fill='currentColor' stroke='url(#gradient)'/>
+            </motion.button>
 
-            <button onClick={() => setDropdown(!dropdown)} onBlur={delay} id="dropdown-button" className="bg-transparent rounded-full p-3 border border-transparent hover:border-yellow-400 focus:ring-1 focus:ring-yellow-400 transition">
-                <GrLanguage className='text-yellow-400' />
-            </button>
-
-            {dropdown && <div className="w-24 rounded-md shadow-lg shadow-black z-10">
-                <div className="grid grid-cols-2">
-                    <Link href='/en' className="rounded-md p-2 text-sm text-yellow-500 hover:bg-gray-700 active:bg-gray-700 cursor-pointer" role="menuitem">
-                        <US title="United States" />
-                    </Link>
-                    <Link href='/fa' className="rounded-md p-2 text-sm text-yellow-500 hover:bg-gray-700 active:bg-gray-700 cursor-pointer" role="menuitem">
-                        <IR title="Iran" />
-                    </Link>
-                </div>
-            </div>}
-
-        </div>
+            <AnimatePresence>
+                {
+                    dropdown &&
+                    <div className="absolute rounded-md z-10 flex gap-3 top-12">
+                        <motion.div whileHover={{ scale: 1.4 }} className='w-10 p-1' initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0 }}>
+                            <Link href='/en' className="rounded-md w-full text-sm active:border-yellow-500 cursor-pointer" role="menuitem">
+                                <US title="United States" />
+                            </Link>
+                        </motion.div>
+                        <motion.div whileHover={{ scale: 1.4 }} className='w-10 p-1' initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0 }}>
+                            <Link href='/fa' className="rounded-md w-full text-sm active:border-yellow-500 cursor-pointer" role="menuitem">
+                                <IR title="Iran" />
+                            </Link>
+                        </motion.div>
+                    </div>
+                }
+            </AnimatePresence>
+        </div >
     )
 }
+export default Dropdown

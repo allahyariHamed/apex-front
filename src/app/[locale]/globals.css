@@ -43,25 +43,25 @@ body {
   width: 0px;
 }
 
-.bg-222 {
-  background-color: #111;
+
+.text-anchor-middle {
+  text-anchor: middle;
 }
 
-.logo-path {
-    stroke-width: 3px;
-    stroke: url('#gradient-0');
-    fill: rgb(17, 17, 17);
-    stroke-dasharray: 255%;
-    stroke-dashoffset: 0%;
-    animation: show-logo 5s linear forwards;
+.transform-box {
+  transform-box: fill-box;
 }
 
-@keyframes show-logo {
-    0% {
-        stroke-dashoffset: 255%;
-    }
+/* .bg-linear {
+  background: linear-gradient(90deg, rgba(212, 190, 0, 1) 0%, rgba(255, 242, 171, 1) 50%, rgba(212, 190, 0, 1) 100%);
+} */
 
-    100% {
-        stroke-dashoffset: 0%;
-    }
-}
+/* @keyframes show-logo {
+  0% {
+    stroke-dasharray: 0%;
+  }
+
+  100% {
+    stroke-dasharray: 100%;
+  }
+} */
