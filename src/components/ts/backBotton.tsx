@@ -5,11 +5,7 @@ import { animatePageOut } from '../../../animations';
 import { IoArrowBackCircle } from 'react-icons/io5';
 import clsx from 'clsx';
 
-interface Props {
-    className?: string;
-}
-
-const Back_botton: FC<Props> = ({ className }) => {
+const BackButton = ({ className }: { className: string }) => {
 
     const [position, setPosition] = useState<{ x: number; y: number }>({ x: 0, y: 0 })
     const mouse_position = (event: MouseEvent) => {
@@ -29,7 +25,6 @@ const Back_botton: FC<Props> = ({ className }) => {
     }, [])
 
     return (
-
         <div>
             <svg width="0" height="0">
                 <linearGradient id="gradient" x1="100%" y1="100%" x2="0%" y2="0%">
@@ -38,9 +33,9 @@ const Back_botton: FC<Props> = ({ className }) => {
                 </linearGradient>
             </svg>
             <a onClick={handleClick}>
-                <IoArrowBackCircle className={clsx('absolute w-11 h-11 top-1 left-7 rounded-3xl hover:cursor-pointer', className)} style={{ fill: "url(#gradient)" }}/>
+                <IoArrowBackCircle className={clsx('absolute w-11 h-11 rounded-full hover:cursor-pointer', className)} style={{ fill: "url(#gradient)" }} />
             </a>
         </div>
     )
 }
-export default Back_botton
+export default BackButton

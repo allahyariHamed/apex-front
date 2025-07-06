@@ -1,9 +1,9 @@
-.container {
+/* .container {
     position: relative;
     width: 135px;
     margin-left: 80px;
     flex-wrap: wrap;
-}
+} */
 
 .iconWrapper {
     display: flex;

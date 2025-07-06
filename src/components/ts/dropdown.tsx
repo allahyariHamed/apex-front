@@ -4,7 +4,6 @@ import { US } from 'country-flag-icons/react/3x2'
 import { IR } from 'country-flag-icons/react/3x2'
 import Link from 'next/link';
 import { GrLanguage } from "react-icons/gr";
-import clsx from 'clsx';
 import { AnimatePresence, motion } from "framer-motion"
 
 const Dropdown = () => {
@@ -15,10 +14,8 @@ const Dropdown = () => {
 
     return (
         <div className="flex justify-center absolute top-4 w-full">
-            <motion.button whileHover={{ scale: 1.5 }} onClick={() => setDropdown(!dropdown)} onBlur={delay} id="dropdown-button" className={clsx("relative bg-transparent rounded-full mt-3 p-1",
-                // dropdown && 'focus:ring-1 focus:ring-yellow-400'
-            )}>
-                <GrLanguage fill='currentColor' stroke='url(#gradient)'/>
+            <motion.button whileHover={{ scale: 1.5 }} onClick={() => setDropdown(!dropdown)} onBlur={delay} id="dropdown-button" className="relative bg-transparent rounded-full mt-3 p-1">
+                <GrLanguage fill='currentColor' stroke='url(#gradient)' />
             </motion.button>
 
             <AnimatePresence>

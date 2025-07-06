@@ -1,11 +1,10 @@
-import Skills_circle from "./components/skills-circles"
 import TranslationsProvider from '../../../components/ts/translation-provider';
 import initTranslations from "@/app/i18n";
-import { FC } from "react";
+import SkillsCircles from './components/skillsCircle';
 
-const Skills: FC = async ({ params: { locale } }: any) => {
-
-  const namespaces = ['skills_page']
+const Skills = async (props: { params: Promise<{ locale: string }> }) => {
+  const { locale } = await props.params
+  const namespaces = ['skillsPage']
   const { resources } = await initTranslations(locale, namespaces, undefined, undefined);
   // const paragraphs = [
   //   [
@@ -117,7 +116,7 @@ const Skills: FC = async ({ params: { locale } }: any) => {
 
   return (
     <TranslationsProvider resources={resources} locale={locale} namespaces={namespaces}>
-      <Skills_circle />
+      <SkillsCircles />
     </TranslationsProvider>
   )
 }

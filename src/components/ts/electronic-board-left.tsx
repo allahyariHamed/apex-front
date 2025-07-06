@@ -16,7 +16,7 @@ export const ElectronicBoardLeft = () => {
                 <TransitionLink pointer='68%' href="/costumers" />
             </div>
             <div className='w-[35%] h-[20%] absolute left-0 top-[70%] flex justify-end'>
-                <TransitionLink pointer='55%' href="/contact_us" />
+                <TransitionLink pointer='55%' href="/contactUs" />
             </div>
 
             <motion.svg viewBox="0 0 500 500" xmlnsXlink="http://www.w3.org/1999/xlink">

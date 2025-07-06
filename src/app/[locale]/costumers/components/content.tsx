@@ -1,5 +1,5 @@
 "use client"
-import Back_botton from "@/components/ts/back-botton";
+import Back_botton from "@/components/ts/backBotton";
 import { FC } from "react";
 import AroundLogo from "./around-logo";
 import ApexLogo from "./apex-logo";

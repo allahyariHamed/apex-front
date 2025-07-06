@@ -1,9 +1,9 @@
 "use client"
 import React from 'react'
-import "@/app/[locale]/about_us/about_us.css"
+import "@/app/[locale]/aboutUs/about_us.css"
 import Image from 'next/image'
-import Slider from './Slider'
-import Back_botton from '@/components/ts/back-botton'
+import Slider from './slider'
+import Back_botton from '@/components/ts/backBotton'
 
 const AboutUsContent = () => {
 

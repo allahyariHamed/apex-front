@@ -3,7 +3,7 @@ import "./page.css"
 import initTranslations from '@/app/i18n'
 import TranslationsProvider from '@/components/ts/translation-provider'
 import Content from './components/content'
-import Back_botton from '@/components/ts/back-botton'
+import Back_botton from '@/components/ts/backBotton'
 
 const ContactUs = async ({ params: { locale } }: any) => {
   const namespaces = ['contactUs']

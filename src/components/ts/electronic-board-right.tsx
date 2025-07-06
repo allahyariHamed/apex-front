@@ -13,10 +13,10 @@ export const ElectronicBoardRight = () => {
                 <TransitionLink href="/skills" pointer='58%' />
             </div>
             <div className='w-[29%] h-[19%] absolute right-0 top-[36%]'>
-                <TransitionLink href="/about_us" pointer='68%' />
+                <TransitionLink href="/aboutUs" pointer='68%' />
             </div>
             <div className='w-[35%] h-[20%] absolute right-0 top-[71%]'>
-                <TransitionLink href="/apex_team" pointer='55%' />
+                <TransitionLink href="/apexTeam" pointer='55%' />
             </div>
 
             <motion.svg viewBox="0 0 500 500" xmlnsXlink="http://www.w3.org/1999/xlink">

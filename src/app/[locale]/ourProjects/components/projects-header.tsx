@@ -2,7 +2,7 @@
 import React, { FC, useState } from 'react'
 import "@/app/[locale]/ourProjects/projects.css"
 import ProjectSvg from './projects-svg'
-import Back_botton from '@/components/ts/back-botton'
+import Back_botton from '@/components/ts/backBotton'
 import { useTranslation } from 'react-i18next'
 
 const Projects_header: FC = () => {

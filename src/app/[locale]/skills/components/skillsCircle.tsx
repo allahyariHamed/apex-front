@@ -1,7 +1,5 @@
 'use client'
-
-import React, { MouseEventHandler, useEffect, useState } from 'react'
-import Style from "@/components/css/Skills_circles.module.css";
+import React, { useState } from 'react'
 import { GiBrain } from "react-icons/gi";
 import { BsAndroid2 } from "react-icons/bs";
 import { IoLogoChrome } from "react-icons/io5";
@@ -9,11 +7,10 @@ import { FaServer } from "react-icons/fa6";
 import { FaApple } from "react-icons/fa";
 import { TbPhotoFilled } from "react-icons/tb";
 import { BsShieldLockFill } from "react-icons/bs";
-import style from "@/app/[locale]/skills/skills.module.css";
 import { useTranslation } from 'react-i18next';
-import Back_botton from '@/components/ts/back-botton';
+import SkillsPageButton from '@/components/ts/skillsPageButton';
 
-const Skills_circles = () => {
+const SkillsCircles = () => {
 
     const [heading, setHeading] = useState<string>("")
     const [title, setTitle] = useState<string>("")
@@ -66,56 +63,50 @@ const Skills_circles = () => {
     }
 
     return (
-        <div className={style.skills_container}>
-            <div className='shadow-lg shadow-black mt-6 ml-16 rounded-lg '>
-                <div className='relative grid justify-center'>
-                    <Back_botton className=''/>
+        <div className='grid grid-cols-9 gap-5 p-5'>
+            <div className='rounded-lg border col-span-8'>
 
+                <div className='relative grid justify-center'>
                     <div className='mt-4'>
                         <h1 className='text-3xl text-yellow-400'>{t(heading)}</h1>
                     </div>
-
                     {
-                        title ?
-                            <div className={style.title_div}>
-                                <p>{title}</p>
-                            </div>
-                            : ""
+                        title &&
+                        <div>
+                            <p>{title}</p>
+                        </div>
                     }
                 </div>
 
                 <div className="mt-5">
-                    <ol className={style.ol}>
+                    <ol>
                         {
                             descriptions.map((value, i) => {
-                                return <li className={style.li} key={i}>{t(value.toString())}</li>
+                                return <li key={i}>{t(value.toString())}</li>
                             })
                         }
                     </ol>
                 </div>
             </div>
 
-            <div className={Style.container}>
-
+            <div className='col-span-1'>
                 {icons.map((icon, i) => {
-                    let Icon_component = icon.icon;
                     return (
-                        <div key={i} className={Style.iconWrapper}>
-                            <div id={i.toString()} className={Style.circle} onClick={() => {
+                        // <div key={i} className={Style.iconWrapper}>
+                        //     <div id={i.toString()} className={Style.circle} onClick={() => {
 
-                                Description_handler(i, icon.name, icon.title)
-                                reset_style(i)
-                            }}>
-                                <Icon_component className='text-yellow-400' />
-                            </div>
-                            {/* <div className={Style.icon_title}>{icon.name}</div> */}
-                        </div>
+                        //         Description_handler(i, icon.name, icon.title)
+                        //         reset_style(i)
+                        //     }}>
+                        //         <Icon_component className='text-yellow-400' />
+                        //     </div>
+                        // </div>
+                        <SkillsPageButton key={i} Icon={icon.icon} />
                     )
                 })}
-                <div className={Style.skills_line}></div>
+                {/* <div className={Style.skills_line}></div> */}
             </div>
         </div>
     )
 }
-
-export default Skills_circles
+export default SkillsCircles
